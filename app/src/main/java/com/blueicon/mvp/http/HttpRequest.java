@@ -5,6 +5,7 @@ import com.blueicon.mvp.model.request.UsuarioRequest;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 /**
@@ -15,5 +16,6 @@ public interface HttpRequest {
 
 
     @POST("Usuario/LoguearUsuario")
+    @Headers("Accept: application/json")
     Call<Usuario> loggin(@Body UsuarioRequest request);
 }
